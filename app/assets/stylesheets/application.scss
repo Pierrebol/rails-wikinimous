@@ -1,1 +1,11 @@
 @import "bootstrap/scss/bootstrap";
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: lightgrey;
+  margin-bottom: 10px;
+}
+
+
