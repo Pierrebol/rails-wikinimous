@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+puts "Starting seeds..."
+
+puts "Destroy articles"
+
+Article.destroy_all
+
+puts "Articles destroyed !"
+
+puts "Creating articles..."
+
+10.times do
+  Article.create(
+    title: Faker::TvShows::RickAndMorty.character,
+    content: Faker::TvShows::RickAndMorty.quote
+  )
+end
+
+puts "#{Article.count} articles created"
